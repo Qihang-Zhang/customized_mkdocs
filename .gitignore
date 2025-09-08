@@ -1,0 +1,7 @@
+*.DS_Store
+site
+.venv
+customized_mkdocs
+main.py
+Blog
+tmp

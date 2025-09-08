@@ -1,0 +1,16 @@
+site_name: Standardized Blog Template
+
+site_url: https://qihang-zhang.github.io/customized_mkdocs
+
+extra:
+  homepage: https://qihang-zhang.github.io/
+
+plugins:
+  - blog:
+      blog_dir: Blog
+      blog_toc: true
+      post_dir: "{blog}/Posts"
+
+theme:
+  logo: assets/fruit/watermelon.svg
+  favicon: assets/fruit/lemon.svg
