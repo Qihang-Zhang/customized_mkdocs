@@ -1,7 +1,7 @@
-alias copy_mkdocs_config="./customized_mkdocs/maintain_config/copy_config.sh"
-alias remove_mkdocs_config="./customized_mkdocs/maintain_config/remove_config.sh"
-alias mk_preview="zsh ./customized_mkdocs/mkdocs_preview.sh"
-alias mk_publish="zsh ./customized_mkdocs/mkdocs_publish.sh"
+alias copy_mkdocs_config="uv run zsh ./customized_mkdocs/maintain_config/copy_config.sh"
+alias remove_mkdocs_config="uv run zsh ./customized_mkdocs/maintain_config/remove_config.sh"
+alias mk_preview="uv run zsh ./customized_mkdocs/mkdocs_preview.sh"
+alias mk_publish="uv run zsh ./customized_mkdocs/mkdocs_publish.sh"
 
 echo "------------------------------------------------------------------------"
 echo "use the following commands to manage the blog"
