@@ -14,6 +14,16 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+# Load environment variables from .env if present
+if [ -f .env ]; then
+  set -a
+  . ./.env
+  set +a
+fi
+
+# Determine blog directory from env, default to "Blog"
+blog_dir="${BLOG_DIR:-Blog}"
+
 mkdir -p tmp
 
 python3 ./customized_mkdocs/yml_add_ifpublish.py \
@@ -27,6 +37,7 @@ python3 ./customized_mkdocs/yml_merge.py \
     -o tmp/mkdocs.yml
 
 python3 ./customized_mkdocs/yml_add_nav.py \
+    --blog_dir "${blog_dir}" \
     -i tmp/mkdocs.yml \
     -o mkdocs.yml
 
