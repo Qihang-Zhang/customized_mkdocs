@@ -18,7 +18,7 @@ done
 if [ -n "$GENYML_URL" ]; then
   curl -fsSL "$GENYML_URL" | bash -s -- -p
 else
-  uv run zsh ./customized_mkdocs/mkdocs_genyml.sh -p
+  uv run bash ./customized_mkdocs/mkdocs_genyml.sh -p
 fi
 
 uv run mkdocs gh-deploy --force
@@ -29,7 +29,7 @@ git push
 echo "--------------------------------"
 echo "publish done"
 
-uv run zsh ./customized_mkdocs/maintain_config/remove_config.sh
+uv run bash ./customized_mkdocs/maintain_config/remove_config.sh
 
 echo "--------------------------------"
 echo "remove config done"
